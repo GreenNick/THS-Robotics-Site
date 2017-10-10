@@ -9,4 +9,8 @@ body {
   body main {
     flex: auto; }
 
+nav {
+  width: 0;
+  overflow: hidden; }
+
 /*# sourceMappingURL=main.css.map */
