@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row-reverse; }
+  body main {
+    flex: auto; }
+
+/*# sourceMappingURL=main.css.map */
