@@ -8,12 +8,21 @@ body {
   flex-direction: row-reverse; }
   body main {
     flex: auto; }
+    body main h3 {
+      font-size: 36px;
+      color: #333333;
+      font-family: "Ubuntu";
+      font-weight: normal; }
+    body main p {
+      font-size: 18px;
+      color: #4F4F4F;
+      font-family: "Nunito"; }
 
 nav {
   width: 0;
   overflow: hidden; }
 
-section {
+section.hero {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -21,25 +30,37 @@ section {
   background: linear-gradient(rgba(86, 204, 242, 0.8), rgba(111, 207, 151, 0.8)), url("../img/hero-background.jpeg") bottom;
   background-size: cover;
   font-family: "Anton"; }
-  section h2 {
+  section.hero h2 {
     text-align: center;
     font-size: 64px;
     color: white;
     font-weight: normal;
     opacity: 0.9;
     line-height: 1em; }
-  section h1 {
+  section.hero h1 {
     text-align: center;
     font-size: 96px;
     color: #4F4F4F;
     font-weight: normal;
     opacity: 0.9; }
-  section p {
+  section.hero p {
     font-size: 36px;
+    font-family: "Anton";
     color: white;
     position: absolute;
     bottom: 0;
     left: 12px;
     opacity: 0.9; }
+
+section.introduction {
+  height: 500px; }
+  section.introduction h3 {
+    text-align: center;
+    margin: 40px auto 0 auto;
+    width: 33%; }
+  section.introduction p {
+    margin: 20px auto 0 auto;
+    line-height: 1.4em;
+    width: 33%; }
 
 /*# sourceMappingURL=main.css.map */
