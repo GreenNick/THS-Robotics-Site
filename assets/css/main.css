@@ -88,8 +88,10 @@ section.introduction {
     width: 33%; }
 
 section.values {
-  height: 400px;
-  background: #56CCF2; }
+  height: 500px;
+  background: #56CCF2;
+  display: flex;
+  flex-direction: column; }
   section.values:before {
     height: 100px;
     display: block;
@@ -97,7 +99,7 @@ section.values {
     background: linear-gradient(to left bottom, white 50%, #56CCF2 50%); }
   section.values .value-container {
     width: 33%;
-    margin: auto;
+    margin: auto auto 0 auto;
     display: flex;
     justify-content: space-between; }
     section.values .value-container .value-icon {
@@ -114,6 +116,20 @@ section.values {
     text-align: center;
     color: white;
     width: 33%;
-    margin: 50px auto 0 auto; }
+    margin: auto;
+    padding-bottom: 50px; }
+
+section.routine {
+  height: 400px;
+  background: #6FCF97;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  section.routine h3 {
+    text-align: center;
+    color: white;
+    width: 33%;
+    padding: 50px 0;
+    margin: auto; }
 
 /*# sourceMappingURL=main.css.map */

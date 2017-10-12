@@ -1,6 +1,8 @@
 section.values
-  height: 400px
+  height: 500px
   background: $color-blue
+  display: flex
+  flex-direction: column
   &:before
     height: 100px
     display: block
@@ -8,7 +10,7 @@ section.values
     background: linear-gradient(to left bottom, white 50%, $color-blue 50%)
   .value-container
     width: 33%
-    margin: auto
+    margin: auto auto 0 auto
     display: flex
     justify-content: space-between
     .value-icon
@@ -25,4 +27,5 @@ section.values
     text-align: center
     color: white
     width: 33%
-    margin: 50px auto 0 auto
+    margin: auto
+    padding-bottom: 50px
