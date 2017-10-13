@@ -13,11 +13,13 @@ body {
       font-size: 36px;
       color: #333333;
       font-family: "Ubuntu";
-      font-weight: normal; }
+      font-weight: normal;
+      padding: 0 12px; }
     body main p {
       font-size: 18px;
       color: #4F4F4F;
-      font-family: "Nunito"; }
+      font-family: "Nunito";
+      padding: 0 12px; }
 
 .nav-btn {
   height: 50px;
@@ -77,15 +79,15 @@ section.hero {
     opacity: 0.9; }
 
 section.introduction {
-  height: 450px; }
+  min-height: 450px; }
   section.introduction h3 {
     text-align: center;
     margin: 40px auto 0 auto;
-    width: 33%; }
+    max-width: 620px; }
   section.introduction p {
     margin: 20px auto 0 auto;
     line-height: 1.4em;
-    width: 33%; }
+    max-width: 620px; }
 
 section.values {
   height: 500px;
@@ -98,7 +100,7 @@ section.values {
     content: "";
     background: linear-gradient(to left bottom, white 50%, #56CCF2 50%); }
   section.values .value-container {
-    width: 33%;
+    max-width: 620px;
     margin: auto auto 0 auto;
     display: flex;
     justify-content: space-between; }
@@ -115,7 +117,7 @@ section.values {
   section.values h3 {
     text-align: center;
     color: white;
-    width: 33%;
+    max-width: 620px;
     margin: auto;
     padding-bottom: 50px; }
 
@@ -128,7 +130,7 @@ section.routine {
   section.routine h3 {
     text-align: center;
     color: white;
-    width: 33%;
+    max-width: 620px;
     padding: 50px 0;
     margin: auto; }
 
