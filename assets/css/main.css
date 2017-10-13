@@ -10,11 +10,13 @@ body {
     flex: auto;
     overflow: hidden; }
     body main h3 {
+      text-align: center;
       font-size: 36px;
       color: #333333;
       font-family: "Ubuntu";
       font-weight: normal;
-      padding: 0 12px; }
+      padding: 0 12px;
+      max-width: 620px; }
     body main p {
       font-size: 18px;
       color: #4F4F4F;
@@ -81,9 +83,7 @@ section.hero {
 section.introduction {
   min-height: 450px; }
   section.introduction h3 {
-    text-align: center;
-    margin: 40px auto 0 auto;
-    max-width: 620px; }
+    margin: 40px auto 0 auto; }
   section.introduction p {
     margin: 20px auto 0 auto;
     line-height: 1.4em;
@@ -100,7 +100,7 @@ section.values {
     content: "";
     background: linear-gradient(to left bottom, white 50%, #56CCF2 50%); }
   section.values .value-container {
-    max-width: 620px;
+    width: 620px;
     margin: auto auto 0 auto;
     display: flex;
     justify-content: space-between; }
@@ -115,11 +115,9 @@ section.values {
       color: white;
       font-size: 24px; }
   section.values h3 {
-    text-align: center;
     color: white;
-    max-width: 620px;
-    margin: auto;
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    margin: auto auto 0 auto; }
 
 section.routine {
   height: 400px;
@@ -128,10 +126,23 @@ section.routine {
   flex-direction: column;
   justify-content: space-between; }
   section.routine h3 {
-    text-align: center;
     color: white;
-    max-width: 620px;
     padding: 50px 0;
-    margin: auto; }
+    margin: 0 auto; }
+
+section.hours {
+  height: 500px;
+  background: #BB6BD9;
+  display: flex;
+  flex-direction: column; }
+  section.hours h3 {
+    color: white;
+    padding: 50px 0;
+    margin: auto auto 0 auto; }
+  section.hours:after {
+    height: 100px;
+    display: block;
+    content: "";
+    background: linear-gradient(to left bottom, #BB6BD9 50%, white 50%); }
 
 /*# sourceMappingURL=main.css.map */
