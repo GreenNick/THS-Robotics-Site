@@ -147,7 +147,7 @@ section.hours {
     position: relative;
     margin: auto; }
     section.hours .alarm-container object {
-      height: 230px; }
+      height: 235px; }
     section.hours .alarm-container p {
       position: absolute;
       font-size: 132px;
@@ -166,5 +166,36 @@ section.hours {
     display: block;
     content: "";
     background: linear-gradient(to left bottom, #BB6BD9 50%, white 50%); }
+
+section.awards h3 {
+  padding: 50px 0;
+  margin: 0 auto; }
+section.awards .trophy-container {
+  height: 500px;
+  width: 400px;
+  margin: auto auto 50px auto;
+  background: #828282; }
+section.awards .qual-bar {
+  height: 150px;
+  width: 100%;
+  background: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  section.awards .qual-bar .container {
+    margin: auto;
+    width: 33vw;
+    display: flex;
+    justify-content: space-between; }
+    section.awards .qual-bar .container .qualifications {
+      display: flex; }
+      section.awards .qual-bar .container .qualifications p {
+        font-family: "Ubuntu";
+        font-size: 48px;
+        color: white;
+        padding: 0; }
+      section.awards .qual-bar .container .qualifications p.label {
+        font-size: 24px;
+        padding: 0 12px; }
 
 /*# sourceMappingURL=main.css.map */
