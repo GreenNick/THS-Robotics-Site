@@ -12,6 +12,7 @@ body {
     body main h3 {
       text-align: center;
       font-size: 36px;
+      margin: 50px auto;
       color: #333333;
       font-family: "Ubuntu";
       font-weight: normal;
@@ -55,7 +56,7 @@ section.hero {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(rgba(86, 204, 242, 0.8), rgba(111, 207, 151, 0.8)), url("../img/hero-background.jpeg") bottom;
+  background: linear-gradient(to bottom right, rgba(86, 204, 242, 0.8), rgba(111, 207, 151, 0.8)), url("../img/hero-background.jpeg") bottom;
   background-size: cover;
   font-family: "Anton"; }
   section.hero h2 {
@@ -86,8 +87,6 @@ section.hero {
 
 section.introduction {
   min-height: 450px; }
-  section.introduction h3 {
-    margin: 40px auto 0 auto; }
   section.introduction p {
     margin: 20px auto 0 auto;
     line-height: 1.4em;
@@ -119,9 +118,7 @@ section.values {
       color: white;
       font-size: 24px; }
   section.values h3 {
-    color: white;
-    padding: 50px;
-    margin: 0 auto; }
+    color: white; }
 
 section.routine {
   height: 400px;
@@ -130,9 +127,7 @@ section.routine {
   flex-direction: column;
   justify-content: space-between; }
   section.routine h3 {
-    color: white;
-    padding: 50px 0;
-    margin: 0 auto; }
+    color: white; }
 
 section.hours {
   height: 500px;
@@ -140,9 +135,7 @@ section.hours {
   display: flex;
   flex-direction: column; }
   section.hours h3 {
-    color: white;
-    padding: 50px 0;
-    margin: 0 auto; }
+    color: white; }
   section.hours .alarm-container {
     position: relative;
     margin: auto; }
@@ -167,9 +160,6 @@ section.hours {
     content: "";
     background: linear-gradient(to left bottom, #BB6BD9 50%, white 50%); }
 
-section.awards h3 {
-  padding: 50px 0;
-  margin: 0 auto; }
 section.awards .trophy-container {
   height: 500px;
   width: 400px;
@@ -184,7 +174,7 @@ section.awards .qual-bar {
   justify-content: center; }
   section.awards .qual-bar .container {
     margin: auto;
-    width: 33vw;
+    width: 620px;
     display: flex;
     justify-content: space-between; }
     section.awards .qual-bar .container .qualifications {
@@ -197,5 +187,16 @@ section.awards .qual-bar {
       section.awards .qual-bar .container .qualifications p.label {
         font-size: 24px;
         padding: 0 12px; }
+
+section.teacher .teacher-img {
+  background: linear-gradient(to bottom right, rgba(187, 107, 217, 0.4), rgba(111, 207, 151, 0.4)), url("../img/teacher-placeholder.jpeg") center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  margin: auto; }
+section.teacher p {
+  max-width: 620px;
+  margin: 50px auto; }
 
 /*# sourceMappingURL=main.css.map */
