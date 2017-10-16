@@ -199,4 +199,25 @@ section.teacher p {
   max-width: 620px;
   margin: 50px auto; }
 
+section.diversity {
+  display: flex; }
+  section.diversity .diversity-images {
+    background: pink;
+    height: 30vw;
+    width: 50vw;
+    display: flex;
+    flex-wrap: wrap; }
+    section.diversity .diversity-images img {
+      height: 10vw;
+      width: 20%; }
+  section.diversity .diversity-blurb {
+    background: #333333;
+    height: 30vw;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    section.diversity .diversity-blurb h3 {
+      color: white; }
+
 /*# sourceMappingURL=main.css.map */
