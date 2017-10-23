@@ -246,4 +246,20 @@ section.clubs .club-container {
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); }
 
+section.outreach {
+  background: #6FCF97;
+  display: flex; }
+  section.outreach .outreach-text {
+    width: 70vw;
+    margin: 100px 0; }
+    section.outreach .outreach-text h3 {
+      color: white;
+      text-align: left;
+      width: 620px;
+      margin: 0 auto 8px; }
+    section.outreach .outreach-text p {
+      color: white;
+      width: 620px;
+      margin: 0 auto 8px; }
+
 /*# sourceMappingURL=main.css.map */
