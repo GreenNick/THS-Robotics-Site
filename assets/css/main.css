@@ -11,7 +11,7 @@ body {
     overflow: hidden; }
     body main h3 {
       text-align: center;
-      font-size: 36px;
+      font-size: 2.25rem;
       margin: 50px auto;
       color: #333333;
       font-family: "Ubuntu";
@@ -19,11 +19,16 @@ body {
       padding: 0 12px;
       max-width: 620px; }
     body main p {
-      font-size: 18px;
+      font-size: 1.125rem;
       color: #4F4F4F;
       font-family: "Nunito";
       padding: 0 12px; }
 
+@media (max-width: 900px) {
+  body main h3 {
+    font-size: 2rem; }
+  body main p {
+    font-size: 1rem; } }
 footer {
   height: 150px;
   background: #333333; }
@@ -65,19 +70,18 @@ section.hero {
   font-family: "Anton"; }
   section.hero h2 {
     text-align: center;
-    font-size: 64px;
+    font-size: 4rem;
     color: white;
     font-weight: normal;
-    opacity: 0.9;
-    line-height: 1em; }
+    opacity: 0.9; }
   section.hero h1 {
     text-align: center;
-    font-size: 96px;
+    font-size: 6rem;
     color: #4F4F4F;
     font-weight: normal;
     opacity: 0.9; }
   section.hero a {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: "Anton";
     text-decoration: none;
     color: white;
@@ -89,6 +93,16 @@ section.hero {
     section.hero a:hover {
       transform: scale(1.1); }
 
+@media (max-width: 900px) {
+  section.hero h2 {
+    font-size: 3rem; }
+  section.hero h1 {
+    font-size: 4.5rem; }
+  section.hero a {
+    font-size: 1.8rem; } }
+@media (max-width: 520px) {
+  section.hero h1 {
+    font-size: 3rem; } }
 section.introduction {
   min-height: 450px; }
   section.introduction p {

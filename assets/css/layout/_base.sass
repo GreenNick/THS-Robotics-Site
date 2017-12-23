@@ -11,7 +11,7 @@ body
     overflow: hidden
     h3
       text-align: center
-      font-size: 36px
+      font-size: 2.25rem
       margin: 50px auto
       color: $primary-grey
       font-family: $heading-font
@@ -19,7 +19,15 @@ body
       padding: 0 12px
       max-width: 620px
     p
-      font-size: 18px
+      font-size: 1.125rem
       color: $secondary-grey
       font-family: $body-font
       padding: 0 12px
+
+@media (max-width: 900px)
+  body
+    main
+      h3
+        font-size: 2rem
+      p
+        font-size: 1rem

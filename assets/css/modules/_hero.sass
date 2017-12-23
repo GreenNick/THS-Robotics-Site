@@ -8,19 +8,18 @@ section.hero
   font-family: $display-font
   h2
     text-align: center
-    font-size: 64px
+    font-size: 4rem
     color: white
     font-weight: normal
     opacity: 0.9
-    line-height: 1em
   h1
     text-align: center
-    font-size: 96px
+    font-size: 6rem
     color: #4F4F4F
     font-weight: normal
     opacity: 0.9
   a
-    font-size: 36px
+    font-size: 2.25rem
     font-family: $display-font
     text-decoration: none
     color: white
@@ -31,3 +30,17 @@ section.hero
     opacity: 0.9
     &:hover
       transform: scale(1.1)
+
+@media (max-width: 900px)
+  section.hero
+    h2
+      font-size: 3rem
+    h1
+      font-size: 4.5rem
+    a
+      font-size: 1.8rem
+
+@media (max-width: 520px)
+  section.hero
+    h1
+      font-size: 3rem
