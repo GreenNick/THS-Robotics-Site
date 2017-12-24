@@ -117,7 +117,8 @@ section.hero {
   section.hero h1 {
     font-size: 3rem; } }
 section.introduction {
-  min-height: 450px; }
+  min-height: 450px;
+  margin-bottom: 50px; }
   section.introduction p {
     margin: 20px auto 0 auto;
     line-height: 1.4em;
