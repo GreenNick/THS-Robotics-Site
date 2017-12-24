@@ -129,10 +129,12 @@ section.values {
   display: flex;
   flex-direction: column; }
   section.values:before {
-    height: 100px;
+    width: 105vw;
+    overflow: hidden;
+    height: 10vw;
     display: block;
     content: "";
-    background: linear-gradient(to left bottom, white 50%, #56CCF2 50%); }
+    background: linear-gradient(to left bottom, white 50%, #56CCF2 50.5%); }
   section.values .value-container {
     width: 620px;
     margin: auto auto 0 auto;
@@ -185,11 +187,13 @@ section.hours {
       section.hours .alarm-container p span {
         font-size: 32px; }
   section.hours:after {
+    width: 105vw;
+    overflow: hidden;
     margin-top: auto;
-    height: 100px;
+    height: 10vw;
     display: block;
     content: "";
-    background: linear-gradient(to left bottom, #BB6BD9 50%, white 50%); }
+    background: linear-gradient(to left bottom, #BB6BD9 50%, white 50.5%); }
 
 section.awards .trophy-container {
   height: 500px;
