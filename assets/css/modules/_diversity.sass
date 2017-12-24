@@ -2,7 +2,6 @@ section.diversity
   display: flex
   .diversity-images
     background: pink
-    height: 40vw
     width: 50vw
     display: flex
     flex-wrap: wrap
@@ -18,3 +17,14 @@ section.diversity
     justify-content: center
     h3
       color: white
+
+@media (max-width: 800px)
+  section.diversity
+    flex-wrap: wrap-reverse
+    .diversity-images
+      width: 100vw
+      img
+        height: 20vw
+        width: 20%
+    .diversity-blurb
+      width: 100vw

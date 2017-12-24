@@ -234,7 +234,6 @@ section.diversity {
   display: flex; }
   section.diversity .diversity-images {
     background: pink;
-    height: 40vw;
     width: 50vw;
     display: flex;
     flex-wrap: wrap; }
@@ -251,6 +250,16 @@ section.diversity {
     section.diversity .diversity-blurb h3 {
       color: white; }
 
+@media (max-width: 800px) {
+  section.diversity {
+    flex-wrap: wrap-reverse; }
+    section.diversity .diversity-images {
+      width: 100vw; }
+      section.diversity .diversity-images img {
+        height: 20vw;
+        width: 20%; }
+    section.diversity .diversity-blurb {
+      width: 100vw; } }
 section.clubs hr {
   max-width: 310px;
   margin: auto; }
