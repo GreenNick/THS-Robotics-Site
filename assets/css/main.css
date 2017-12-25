@@ -36,6 +36,7 @@ footer {
 .nav-btn {
   height: 50px;
   width: 50px;
+  z-index: 2;
   position: fixed;
   top: 20px;
   right: 20px;
@@ -76,6 +77,8 @@ nav {
 section.hero {
   height: 100vh;
   display: flex;
+  position: relative;
+  z-index: 3;
   justify-content: center;
   flex-direction: column;
   background: linear-gradient(to bottom right, rgba(86, 204, 242, 0.8), rgba(111, 207, 151, 0.8)), url("../img/hero-background.jpeg") bottom;
