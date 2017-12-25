@@ -2,6 +2,7 @@ section.awards
   .trophy-container
     height: 500px
     width: 400px
+    max-width: 90%
     margin: auto auto 50px auto
     background: $tertiary-grey
   .qual-bar
@@ -26,3 +27,13 @@ section.awards
         p.label
           font-size: 24px
           padding: 0 12px
+
+@media (max-width: 680px)
+  section.awards
+    .qual-bar
+      padding: 20px 0
+      .container
+        width: 100%
+        flex-direction: column
+        .qualifications
+          margin: 20px auto
