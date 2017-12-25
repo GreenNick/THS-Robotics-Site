@@ -267,15 +267,16 @@ section.clubs .club-container {
   flex-direction: column;
   justify-content: center; }
   section.clubs .club-container h4 {
-    width: 620px;
+    max-width: 620px;
     margin: 0 auto 8px;
+    padding: 0 12px;
     font-family: "Ubuntu";
     font-size: 36px;
     font-weight: normal;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     color: white; }
   section.clubs .club-container p {
-    width: 620px;
+    max-width: 620px;
     margin: 0 auto;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); }
@@ -285,17 +286,22 @@ section.outreach {
   display: flex; }
   section.outreach .outreach-text {
     width: 70vw;
-    margin: 100px 0; }
+    margin: 50px 0; }
     section.outreach .outreach-text h3 {
       color: white;
       text-align: left;
-      width: 620px;
+      max-width: 620px;
       margin: 0 auto 8px; }
     section.outreach .outreach-text p {
       color: white;
-      width: 620px;
+      max-width: 620px;
       margin: 0 auto 8px; }
 
+@media (max-width: 800px) {
+  section.outreach {
+    flex-direction: column; }
+    section.outreach .outreach-text {
+      width: 100%; } }
 section.contact {
   background: #BB6BD9; }
   section.contact h3 {
@@ -303,9 +309,9 @@ section.contact {
     padding: 50px 0;
     color: white; }
   section.contact .email-container {
-    width: 620px;
+    max-width: 620px;
     margin: 0 auto;
-    padding-bottom: 50px; }
+    padding: 0 12px 50px; }
     section.contact .email-container p {
       font-size: 24px;
       color: #828282; }

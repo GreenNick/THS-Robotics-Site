@@ -3,13 +3,19 @@ section.outreach
   display: flex
   .outreach-text
     width: 70vw
-    margin: 100px 0
+    margin: 50px 0
     h3
       color: white
       text-align: left
-      width: 620px
+      max-width: 620px
       margin: 0 auto 8px
     p
       color: white
-      width: 620px
+      max-width: 620px
       margin: 0 auto 8px
+
+@media (max-width: 800px)
+  section.outreach
+    flex-direction: column
+    .outreach-text
+      width: 100%
