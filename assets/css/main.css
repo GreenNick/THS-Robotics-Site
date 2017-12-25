@@ -154,6 +154,13 @@ section.values {
   section.values h3 {
     color: white; }
 
+@media (max-width: 680px) {
+  section.values .value-container {
+    width: 100%; }
+    section.values .value-container .value-icon {
+      max-width: 25vw;
+      max-height: 25vw;
+      margin: 0 12px; } }
 section.routine {
   height: 400px;
   background: #6FCF97;
