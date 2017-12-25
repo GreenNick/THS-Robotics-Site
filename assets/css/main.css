@@ -174,19 +174,8 @@ section.hours {
     position: relative;
     margin: auto; }
     section.hours .alarm-container object {
-      height: 235px; }
-    section.hours .alarm-container p {
-      position: absolute;
-      font-size: 132px;
-      text-align: center;
-      bottom: 30px;
-      left: 0;
-      right: 0;
-      width: 400px;
-      margin: 0 auto;
-      opacity: 0.9; }
-      section.hours .alarm-container p span {
-        font-size: 32px; }
+      height: 235px;
+      max-width: 100%; }
   section.hours:after {
     width: 105vw;
     overflow: hidden;
