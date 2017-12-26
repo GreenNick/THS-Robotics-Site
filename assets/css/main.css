@@ -154,6 +154,9 @@ section.values {
       display: flex;
       justify-content: center;
       flex-direction: column; }
+      section.values .value-container .value-icon #coop {
+        width: 70%;
+        height: 70%; }
       section.values .value-container .value-icon img {
         height: 60%;
         width: 60%;
