@@ -81,17 +81,17 @@ nav {
       line-height: 2em; }
 
 @media (max-width: 520px) {
-  .nav-btn {
+  #nav-btn {
     top: 15px;
     right: 15px;
     height: 35px;
     width: 35px; }
-    .nav-btn span, .nav-btn span:before, .nav-btn span:after {
+    #nav-btn span, #nav-btn span:before, #nav-btn span:after {
       width: 35px;
       height: 6px; }
-    .nav-btn span:before {
+    #nav-btn span:before {
       top: 12px; }
-    .nav-btn span:after {
+    #nav-btn span:after {
       top: -18px; } }
 section.hero {
   height: 100vh;
