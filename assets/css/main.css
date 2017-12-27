@@ -82,8 +82,8 @@ nav {
 
 @media (max-width: 520px) {
   #nav-btn {
-    top: 15px;
-    right: 15px;
+    top: 20px;
+    right: 20px;
     height: 35px;
     width: 35px; }
     #nav-btn span, #nav-btn span:before, #nav-btn span:after {
