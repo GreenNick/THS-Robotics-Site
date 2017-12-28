@@ -1,5 +1,7 @@
 const navButton = document.getElementById('nav-btn');
 const navItems = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
+const closedStyle = {transform: 'translateX(340px)'};
+const openStyle = {transform: 'translateX(0px)'};
 let navState = false;
 
 const toggleNav = style => {
@@ -10,9 +12,6 @@ const toggleNav = style => {
 }
 
 navButton.addEventListener('click', event => {
-  const closedStyle = {transform: 'translateX(340px)'};
-  const openStyle = {transform: 'translateX(0px)'};
-
   (navState === false) ? toggleNav(openStyle) : toggleNav(closedStyle);
 });
 
@@ -23,6 +22,7 @@ const addListenersToNodes = list => {
       let target = document.getElementById(section);
 
       target.scrollIntoView({behavior: 'smooth'});
+      toggleNav(closedStyle);
     });
   }
 }
