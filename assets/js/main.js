@@ -1,5 +1,3 @@
-require('smoothscroll-polyfill').polyfill();
-
 const navButton = document.getElementById('nav-btn');
 const navItems = document.getElementsByTagName('nav')[0].getElementsByTagName('a');
 const closedStyle = {transform: 'translateX(340px)'};
