@@ -21,7 +21,7 @@ const addListenersToNodes = list => {
       let section = list[item].getAttribute('data-section');
       let target = document.getElementById(section);
 
-      target.scrollIntoView({behavior: 'smooth'});
+      window.scroll({top: target.offsetTop, left: 0, behavior: 'smooth'});
       toggleNav(closedStyle);
     });
   }
