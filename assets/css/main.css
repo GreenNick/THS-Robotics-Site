@@ -270,6 +270,7 @@ section.awards {
     padding: 20px 0; }
     section.awards .qual-bar .container {
       width: 100%;
+      justify-content: center;
       flex-direction: column; }
       section.awards .qual-bar .container .qualifications {
         margin: 20px auto; } }
