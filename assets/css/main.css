@@ -154,10 +154,14 @@ section.introduction {
     margin: 0 auto 8px auto; }
 
 section.values {
-  height: 500px;
   background: #56CCF2;
   display: flex;
   flex-direction: column; }
+  section.values p {
+    max-width: 620px;
+    color: white;
+    margin: 20px auto auto auto;
+    display: none; }
   section.values:before {
     width: 105vw;
     overflow: hidden;
@@ -179,7 +183,10 @@ section.values {
       border-radius: 100%;
       display: flex;
       justify-content: center;
-      flex-direction: column; }
+      flex-direction: column;
+      transition: all 150ms ease-in-out; }
+      section.values .value-container .value-icon:hover {
+        transform: scale(1.1); }
       section.values .value-container .value-icon #coop {
         width: 70%;
         height: 70%; }
@@ -187,8 +194,11 @@ section.values {
         height: 60%;
         width: 60%;
         margin: auto; }
+    section.values .value-container .value-active {
+      background: #6FCF97; }
     section.values .value-container p {
       text-align: center;
+      display: block;
       padding: 0;
       margin-top: 12px;
       color: white;
@@ -213,7 +223,6 @@ section.routine {
     color: white; }
 
 section.hours {
-  height: 500px;
   background: #BB6BD9;
   display: flex;
   flex-direction: column; }

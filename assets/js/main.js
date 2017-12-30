@@ -1,6 +1,7 @@
 $(document).ready(() => {
   scrollTo(400);
   navPress();
+  valueState();
 });
 
 const scrollTo = duration => {
@@ -16,8 +17,17 @@ const scrollTo = duration => {
 }
 
 const navPress = () => {
-  const $navButton = $('#nav-btn');
-  $navButton.on('click', event => {
+  $('#nav-btn').on('click', event => {
     $('nav').toggleClass('nav-active');
   });
+}
+
+const valueState = () => {
+  $('.value-icon').on('click', event => {
+    let value = $(event.currentTarget).siblings().text();
+    $(event.currentTarget).parents('.values').find(`#${value.toLowerCase()}`).siblings('p').hide();
+    $(event.currentTarget).parent().siblings().find('.value-icon').removeClass('value-active');
+    $(event.currentTarget).toggleClass('value-active');
+    $(`#${value.toLowerCase()}`).toggle();
+  })
 }
