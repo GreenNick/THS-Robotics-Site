@@ -4,6 +4,7 @@ section.values
   flex-direction: column
   p
     max-width: 620px
+    padding: 8px
     color: white
     margin: 20px auto auto auto
     display: none
@@ -16,7 +17,7 @@ section.values
     background: linear-gradient(to left bottom, white 50%, $color-blue 50.5%)
   .value-container
     width: 620px
-    margin: auto auto 0 auto
+    margin: 25px auto 0 auto
     display: flex
     justify-content: space-between
     .value-icon
@@ -29,9 +30,11 @@ section.values
       display: flex
       justify-content: center
       flex-direction: column
+      order: initial
       transition: all 150ms ease-in-out
       &:hover
         transform: scale(1.1)
+        border: solid white 6px
       #coop
         width: 70%
         height: 70%
@@ -41,6 +44,10 @@ section.values
         margin: auto
     .value-active
       background: $color-green
+      transform: scale(1.1)
+      border: solid white 6px
+    .value-text-active
+      font-weight: bold
     p
       text-align: center
       display: block

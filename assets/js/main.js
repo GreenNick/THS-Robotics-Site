@@ -27,7 +27,9 @@ const valueState = () => {
     let value = $(event.currentTarget).siblings().text();
     $(event.currentTarget).parents('.values').find(`#${value.toLowerCase()}`).siblings('p').hide();
     $(event.currentTarget).parent().siblings().find('.value-icon').removeClass('value-active');
+    $(event.currentTarget).parent().siblings().find('p').removeClass('value-text-active');
     $(event.currentTarget).toggleClass('value-active');
     $(`#${value.toLowerCase()}`).toggle();
+    $(event.currentTarget).siblings().toggleClass('value-text-active');
   })
 }

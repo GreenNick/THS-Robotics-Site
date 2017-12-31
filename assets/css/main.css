@@ -159,6 +159,7 @@ section.values {
   flex-direction: column; }
   section.values p {
     max-width: 620px;
+    padding: 8px;
     color: white;
     margin: 20px auto auto auto;
     display: none; }
@@ -171,7 +172,7 @@ section.values {
     background: linear-gradient(to left bottom, white 50%, #56CCF2 50.5%); }
   section.values .value-container {
     width: 620px;
-    margin: auto auto 0 auto;
+    margin: 25px auto 0 auto;
     display: flex;
     justify-content: space-between; }
     section.values .value-container .value-icon {
@@ -184,9 +185,11 @@ section.values {
       display: flex;
       justify-content: center;
       flex-direction: column;
+      order: initial;
       transition: all 150ms ease-in-out; }
       section.values .value-container .value-icon:hover {
-        transform: scale(1.1); }
+        transform: scale(1.1);
+        border: solid white 6px; }
       section.values .value-container .value-icon #coop {
         width: 70%;
         height: 70%; }
@@ -195,7 +198,11 @@ section.values {
         width: 60%;
         margin: auto; }
     section.values .value-container .value-active {
-      background: #6FCF97; }
+      background: #6FCF97;
+      transform: scale(1.1);
+      border: solid white 6px; }
+    section.values .value-container .value-text-active {
+      font-weight: bold; }
     section.values .value-container p {
       text-align: center;
       display: block;
