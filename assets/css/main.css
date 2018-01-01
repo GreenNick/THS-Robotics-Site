@@ -237,9 +237,9 @@ section.hours {
     color: white; }
   section.hours .alarm-container {
     position: relative;
-    margin: auto; }
+    margin: auto auto 25px auto; }
     section.hours .alarm-container object {
-      height: 235px;
+      max-height: 235px;
       max-width: 100%; }
   section.hours:after {
     width: 105vw;
