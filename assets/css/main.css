@@ -214,10 +214,12 @@ section.values {
     color: white; }
 
 @media (max-width: 680px) {
-  section.values .value-icon {
-    max-width: 25vw;
-    max-height: 25vw;
-    margin: 0 12px; } }
+  section.values .value-container {
+    width: 100%; }
+    section.values .value-container .value-icon {
+      max-width: 25vw;
+      max-height: 25vw;
+      margin: 0 12px; } }
 section.routine {
   background: #6FCF97;
   display: flex;
@@ -229,7 +231,7 @@ section.routine {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 620px;
+    width: 620px;
     margin: auto; }
     section.routine .calendar-container .work-day {
       height: 64px;
@@ -267,10 +269,14 @@ section.routine {
       margin: auto 0; }
 
 @media (max-width: 680px) {
-  section.routine .work-day {
-    max-width: 10vw;
-    max-height: 10vw;
-    margin: 0 12px; } }
+  section.routine .calendar-container {
+    width: 100%; }
+    section.routine .calendar-container .work-day {
+      max-width: 10vw;
+      max-height: 10vw; }
+    section.routine .calendar-container .off-day {
+      max-width: 5vw;
+      max-height: 5vw; } }
 section.hours {
   background: #BB6BD9;
   display: flex;
