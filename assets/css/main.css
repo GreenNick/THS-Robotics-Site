@@ -231,7 +231,7 @@ section.routine {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 620px;
+    max-width: 620px;
     margin: auto; }
     section.routine .calendar-container .work-day {
       height: 64px;
