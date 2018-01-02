@@ -19,7 +19,7 @@ const scrollTo = duration => {
 }
 
 const navPress = () => {
-  $('#nav-btn').on('click', event => {
+  document.querySelector('#nav-btn').addEventListener('click', event => {
     document.querySelector('nav').classList.toggle('nav-active');
   });
 }
