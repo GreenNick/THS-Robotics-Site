@@ -171,7 +171,7 @@ section.values {
     content: "";
     background: linear-gradient(to left bottom, white 50%, #56CCF2 50.5%); }
   section.values .value-container {
-    max-width: 620px;
+    width: 620px;
     margin: 25px auto 0 auto;
     display: flex;
     justify-content: space-between; }
