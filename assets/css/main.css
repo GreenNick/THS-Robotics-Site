@@ -221,13 +221,52 @@ section.values {
       max-height: 25vw;
       margin: 0 12px; } }
 section.routine {
-  height: 400px;
   background: #6FCF97;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
   section.routine h3 {
     color: white; }
+  section.routine .calendar-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 620px;
+    margin: auto; }
+    section.routine .calendar-container .work-day {
+      height: 64px;
+      width: 64px;
+      background: white;
+      border-radius: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: border 150ms ease-in-out;
+      margin: auto 0; }
+      section.routine .calendar-container .work-day p {
+        font-size: 20px;
+        color: #6FCF97;
+        padding: 0;
+        text-align: center; }
+    section.routine .calendar-container .off-day {
+      height: 32px;
+      width: 32px;
+      background: white;
+      border-radius: 100%;
+      margin: auto 0;
+      position: relative;
+      z-index: 2; }
+    section.routine .calendar-container .mandatory-active {
+      border: solid #BB6BD9 4px; }
+    section.routine .calendar-container .optional-active {
+      border: solid #56CCF2 4px; }
+    section.routine .calendar-container .calendar-bar {
+      height: 4px;
+      flex-grow: 1;
+      background: white;
+      margin: auto 0; }
 
 section.hours {
   background: #BB6BD9;

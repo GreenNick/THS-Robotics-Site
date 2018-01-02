@@ -1,8 +1,47 @@
 section.routine
-  height: 400px
   background: $color-green
   display: flex
   flex-direction: column
   justify-content: space-between
   h3
     color: white
+  .calendar-container
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 620px
+    margin: auto
+    .work-day
+      height: 64px
+      width: 64px
+      background: white
+      border-radius: 100%
+      position: relative
+      z-index: 2
+      display: flex
+      flex-direction: column
+      justify-content: center
+      transition: border 150ms ease-in-out
+      margin: auto 0
+      p
+        font-size: 20px
+        color: $color-green
+        padding: 0
+        text-align: center
+    .off-day
+      height: 32px
+      width: 32px
+      background: white
+      border-radius: 100%
+      margin: auto 0
+      position: relative
+      z-index: 2
+    .mandatory-active
+      border: solid $color-purple 4px
+    .optional-active
+      border: solid $color-blue 4px
+    .calendar-bar
+      height: 4px
+      flex-grow: 1
+      background: white
+      margin: auto 0

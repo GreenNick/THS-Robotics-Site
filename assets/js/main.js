@@ -2,6 +2,8 @@ $(document).ready(() => {
   scrollTo(400);
   navPress();
   valueState();
+  calendarHover('optional');
+  calendarHover('mandatory');
 });
 
 const scrollTo = duration => {
@@ -32,4 +34,12 @@ const valueState = () => {
     $(`#${value.toLowerCase()}`).toggle();
     $(event.currentTarget).siblings().toggleClass('value-text-active');
   })
+}
+
+const calendarHover = dayType => {
+  $(`.${dayType}`).on('mouseenter', event => {
+    $(`.${dayType}`).addClass(`${dayType}-active`);
+  }).on('mouseleave', event => {
+    $(`.${dayType}`).removeClass(`${dayType}-active`);
+  });
 }
