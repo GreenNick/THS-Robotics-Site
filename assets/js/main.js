@@ -20,11 +20,7 @@ const scrollTo = duration => {
 
 const navPress = () => {
   $('#nav-btn').on('click', event => {
-    if ($('nav').hasClass('nav-active')) {
-      $('nav').removeClass('nav-active');
-    } else {
-      $('nav').addClass('nav-active');
-    }
+    document.querySelector('nav').classList.toggle('nav-active');
   });
 }
 
