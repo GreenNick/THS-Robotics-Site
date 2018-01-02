@@ -271,13 +271,13 @@ section.routine {
 @media (max-width: 680px) {
   section.routine .calendar-container {
     width: 100%;
-    margin: 0 12px; }
+    padding: 0 12px; }
     section.routine .calendar-container .work-day {
-      max-width: 15vw;
-      max-height: 15vw; }
+      max-width: 12vw;
+      max-height: 12vw; }
     section.routine .calendar-container .off-day {
-      max-width: 7.5vw;
-      max-height: 7.5vw; } }
+      max-width: 6vw;
+      max-height: 6vw; } }
 section.hours {
   background: #BB6BD9;
   display: flex;
