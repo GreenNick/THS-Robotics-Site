@@ -19,8 +19,8 @@ const scrollTo = duration => {
 }
 
 const navPress = () => {
-  document.querySelector('#nav-btn').addEventListener('click', event => {
-    document.querySelector('nav').classList.toggle('nav-active');
+  $('#nav-btn').on('click', event => {
+    $('nav').toggleClass('nav-active');
   });
 }
 
