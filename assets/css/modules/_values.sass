@@ -16,7 +16,7 @@ section.values
     content: ""
     background: linear-gradient(to left bottom, white 50%, $color-blue 50.5%)
   .value-container
-    width: 620px
+    max-width: 620px
     margin: 25px auto 0 auto
     display: flex
     justify-content: space-between
@@ -60,9 +60,7 @@ section.values
 
 @media (max-width: 680px)
   section.values
-    .value-container
-      width: 100%
-      .value-icon
-        max-width: 25vw
-        max-height: 25vw
-        margin: 0 12px
+    .value-icon
+      max-width: 25vw
+      max-height: 25vw
+      margin: 0 12px
