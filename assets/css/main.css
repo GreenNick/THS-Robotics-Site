@@ -23,6 +23,20 @@ body {
       color: #4F4F4F;
       font-family: "Nunito";
       padding: 0 12px; }
+    body main .button {
+      position: absolute;
+      height: 48px;
+      width: 48px;
+      border-radius: 100%;
+      background: #BB6BD9;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+      cursor: pointer; }
+      body main .button div {
+        margin: auto;
+        line-height: 48px;
+        font-size: 28px;
+        text-align: center;
+        color: white; }
   body a {
     text-decoration: none; }
 
@@ -240,7 +254,6 @@ section.routine {
       border-radius: 100%;
       border: solid white 4px;
       position: relative;
-      z-index: 2;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -259,8 +272,7 @@ section.routine {
       border-radius: 100%;
       border: solid white 4px;
       margin: auto 0;
-      position: relative;
-      z-index: 2; }
+      position: relative; }
     section.routine .calendar-container .mandatory-active {
       border: solid #BB6BD9 4px; }
     section.routine .calendar-container .optional-active {
@@ -309,12 +321,20 @@ section.awards {
   section.awards h3 {
     margin: 0 auto 50px auto; }
   section.awards .trophy-container {
+    position: relative;
     height: 500px;
     width: 400px;
     max-width: 90%;
-    margin: auto auto 100px auto; }
+    margin: auto auto 100px auto;
+    display: flex; }
     section.awards .trophy-container object {
       max-width: 100%; }
+    section.awards .trophy-container .left {
+      left: 0;
+      top: 60%; }
+    section.awards .trophy-container .right {
+      right: 0;
+      top: 60%; }
   section.awards .qual-bar {
     height: 150px;
     width: 100%;
@@ -406,13 +426,19 @@ section.clubs {
     background-attachment: fixed;
     background-color: white;
     background-size: cover;
-    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center; }
+    section.clubs .club-container .button-container {
+      margin: 25px auto 50px auto;
+      display: flex; }
+      section.clubs .club-container .button-container .button {
+        position: relative;
+        background: #4F4F4F;
+        margin: 0 50px; }
     section.clubs .club-container h4 {
       max-width: 620px;
-      margin: 0 auto 8px;
+      margin: 50px auto 8px;
       padding: 0 12px;
       font-family: "Ubuntu";
       font-size: 36px;
