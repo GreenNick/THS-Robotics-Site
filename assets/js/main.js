@@ -1,20 +1,18 @@
-$(document).ready(() => {
-  scrollTo(400);
-  valueState();
-  calendarHover('optional');
-  calendarHover('mandatory');
-});
+const scrollTo = () => {
+  const navItems = document.querySelectorAll('nav a'),
+        navSidebar = document.querySelector('nav');
+  let   nodeIndex;
 
-const scrollTo = duration => {
-  $('a[href|="#section"').on('click', event => {
-    let target = $($(event.currentTarget).attr('href'));
+  for (nodeIndex = 0; nodeIndex < navItems.length; nodeIndex++) {
+    navItems[nodeIndex].addEventListener('click', event => {
+      const section = event.currentTarget.getAttribute('href'),
+            target = document.querySelector(section);
 
-    event.preventDefault();
-    $('html, body').animate({
-      scrollTop: target.offset().top
-    }, duration);
-    $('nav').toggleClass('nav-active');
-  });
+      event.preventDefault();
+      target.scrollIntoView({behavior: 'smooth'});
+      navSidebar.classList.toggle('nav-active');
+    });
+  }
 }
 
 const navPress = () => {
@@ -26,32 +24,54 @@ const navPress = () => {
   });
 }
 
-const loopNodeList = nodeList => {
-  let nodeIndex;
+const valueState = () => {
+  const valueIcons = document.querySelectorAll('.value-icon');
+  let   nodeIndex;
 
-  for (nodeIndex = 0; nodeIndex < nodeList.length; nodeIndex++) {
-    return nodeList[nodeIndex];
+  for (nodeIndex = 0; nodeIndex < valueIcons.length; nodeIndex++) {
+    valueIcons[nodeIndex].addEventListener('click', event => {
+      const currentValue = event.currentTarget.parentNode.getAttribute('id'),
+            inactiveParagraphs = document.querySelectorAll(`.values > p:not(#${currentValue})`),
+            inactiveIcons = document.querySelectorAll(`.value-set:not(#${currentValue}) > .value-icon`),
+            inactiveHeadings = document.querySelectorAll(`.value-set:not(#${currentValue}) > p`),
+            activeParagraph = document.querySelector(`.values > #${currentValue}`),
+            activeHeading = document.querySelector(`#${currentValue} > p`);
+      let   nodeIndex;
+
+      for (nodeIndex = 0; nodeIndex < 2; nodeIndex++) {
+        inactiveParagraphs[nodeIndex].classList.add('hidden');
+        inactiveIcons[nodeIndex].classList.remove('value-active');
+        inactiveHeadings[nodeIndex].classList.remove('value-text-active');
+      }
+
+      event.currentTarget.classList.toggle('value-active');
+      activeParagraph.classList.toggle('hidden');
+      activeHeading.classList.toggle('value-text-active');
+    });
   }
 }
 
-const valueState = () => {
-  $('.value-icon').on('click', event => {
-    let value = $(event.currentTarget).siblings().text();
-    $(event.currentTarget).parents('.values').find(`#${value.toLowerCase()}`).siblings('p').hide();
-    $(event.currentTarget).parent().siblings().find('.value-icon').removeClass('value-active');
-    $(event.currentTarget).parent().siblings().find('p').removeClass('value-text-active');
-    $(event.currentTarget).toggleClass('value-active');
-    $(`#${value.toLowerCase()}`).toggle();
-    $(event.currentTarget).siblings().toggleClass('value-text-active');
-  })
-}
-
 const calendarHover = dayType => {
-  $(`.${dayType}`).on('mouseenter', event => {
-    $(`.${dayType}`).addClass(`${dayType}-active`);
-  }).on('mouseleave', event => {
-    $(`.${dayType}`).removeClass(`${dayType}-active`);
-  });
+  const dayList = document.querySelectorAll(`.${dayType}`);
+  let   nodeIndex;
+
+  for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
+    dayList[nodeIndex].addEventListener('mouseenter', () => {
+      for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
+        dayList[nodeIndex].classList.add(`${dayType}-active`);
+      }
+    });
+
+    dayList[nodeIndex].addEventListener('mouseleave', () => {
+      for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
+        dayList[nodeIndex].classList.remove(`${dayType}-active`);
+      }
+    });
+  }
 }
 
 navPress();
+calendarHover('optional');
+calendarHover('mandatory');
+scrollTo();
+valueState();

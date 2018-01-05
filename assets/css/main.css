@@ -179,6 +179,8 @@ section.values {
     padding: 8px;
     color: white;
     margin: 20px auto auto auto;
+    display: block; }
+  section.values .hidden {
     display: none; }
   section.values:before {
     width: 105vw;
