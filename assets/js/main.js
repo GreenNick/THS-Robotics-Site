@@ -1,6 +1,5 @@
 $(document).ready(() => {
   scrollTo(400);
-  navPress();
   valueState();
   calendarHover('optional');
   calendarHover('mandatory');
@@ -19,9 +18,20 @@ const scrollTo = duration => {
 }
 
 const navPress = () => {
-  $('#nav-btn').on('click', event => {
-    $('nav').toggleClass('nav-active');
+  const navButton = document.querySelector('#nav-btn'),
+        navSidebar = document.querySelector('nav');
+
+  navButton.addEventListener('click', () => {
+    navSidebar.classList.toggle('nav-active');
   });
+}
+
+const loopNodeList = nodeList => {
+  let nodeIndex;
+
+  for (nodeIndex = 0; nodeIndex < nodeList.length; nodeIndex++) {
+    return nodeList[nodeIndex];
+  }
 }
 
 const valueState = () => {
@@ -43,3 +53,5 @@ const calendarHover = dayType => {
     $(`.${dayType}`).removeClass(`${dayType}-active`);
   });
 }
+
+navPress();
