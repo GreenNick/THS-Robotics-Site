@@ -10,12 +10,20 @@ section.awards
     margin: auto auto 100px auto
     display: flex
     object
+      position: absolute
       max-width: 100%
+      transition: all 600ms ease-in-out 1000ms
+      opacity: 1
+    .hidden
+      opacity: 0
+      transition: all 600ms ease-in-out
+      transform: translateY(40px)
     .left
-      left: 0
+      z-index: 1
+      left: -10px
       top: 60%
     .right
-      right: 0
+      right: -10px
       top: 60%
   .qual-bar
     height: 150px

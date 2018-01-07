@@ -70,8 +70,37 @@ const calendarHover = dayType => {
   }
 }
 
+const awardsCarousel = () => {
+  const awardObjects = document.querySelectorAll('.trophy-container object'),
+        arrowLeft = document.querySelector('.left'),
+        arrowRight = document.querySelector('.right');
+  let   carouselIndex = 0,
+        nodeIndex;
+
+  arrowLeft.addEventListener('click', event => {
+    awardObjects[carouselIndex].classList.add('hidden');
+    if (carouselIndex === 0) {
+      carouselIndex = 2;
+    } else {
+      carouselIndex--;
+    }
+    awardObjects[carouselIndex].classList.remove('hidden');
+  });
+
+  arrowRight.addEventListener('click', event => {
+    awardObjects[carouselIndex].classList.add('hidden');
+    if (carouselIndex === 2) {
+      carouselIndex = 0;
+    } else {
+      carouselIndex++;
+    }
+    awardObjects[carouselIndex].classList.remove('hidden');
+  });
+}
+
 navPress();
 calendarHover('optional');
 calendarHover('mandatory');
 scrollTo();
 valueState();
+awardsCarousel();

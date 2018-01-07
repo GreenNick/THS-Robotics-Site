@@ -204,7 +204,8 @@ section.values {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      transition: all 150ms ease-in-out; }
+      transition: all 150ms ease-in-out;
+      cursor: pointer; }
       section.values .value-container .value-icon:hover {
         transform: scale(1.1);
         border: solid white 6px; }
@@ -332,12 +333,20 @@ section.awards {
     margin: auto auto 100px auto;
     display: flex; }
     section.awards .trophy-container object {
-      max-width: 100%; }
+      position: absolute;
+      max-width: 100%;
+      transition: all 600ms ease-in-out 1000ms;
+      opacity: 1; }
+    section.awards .trophy-container .hidden {
+      opacity: 0;
+      transition: all 600ms ease-in-out;
+      transform: translateY(40px); }
     section.awards .trophy-container .left {
-      left: 0;
+      z-index: 1;
+      left: -10px;
       top: 60%; }
     section.awards .trophy-container .right {
-      right: 0;
+      right: -10px;
       top: 60%; }
   section.awards .qual-bar {
     height: 150px;
