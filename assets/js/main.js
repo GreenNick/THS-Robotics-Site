@@ -1,5 +1,6 @@
 const scrollTo = () => {
   const navItems = document.querySelectorAll('nav a'),
+        navButton = document.querySelector('.nav-btn'),
         navSidebar = document.querySelector('nav');
   let   nodeIndex;
 
@@ -11,6 +12,7 @@ const scrollTo = () => {
       event.preventDefault();
       target.scrollIntoView({behavior: 'smooth'});
       navSidebar.classList.toggle('nav-active');
+      navButton.classList.toggle('nav-close');
     });
   }
 }
@@ -64,12 +66,16 @@ const calendarHover = dayType => {
       for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
         dayList[nodeIndex].classList.add(`${dayType}-active`);
       }
+
+      document.querySelector(`.${dayType}-container`).classList.add(`${dayType}-active`);
     });
 
     dayList[nodeIndex].addEventListener('mouseleave', () => {
       for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
         dayList[nodeIndex].classList.remove(`${dayType}-active`);
       }
+
+      document.querySelector(`.${dayType}-container`).classList.remove(`${dayType}-active`);
     });
   }
 }

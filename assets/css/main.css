@@ -313,6 +313,28 @@ section.routine {
       flex-grow: 1;
       background: white;
       margin: auto 0; }
+  section.routine .day-container {
+    width: 620px;
+    margin: 25px auto 0;
+    display: flex;
+    justify-content: center; }
+    section.routine .day-container div {
+      border-left: 4px solid #6FCF97;
+      border-top: 4px solid #6FCF97;
+      transition: border 200ms ease-in-out; }
+    section.routine .day-container h4 {
+      padding: 12px;
+      color: white;
+      font-family: "Ubuntu";
+      font-size: 20px; }
+    section.routine .day-container p {
+      color: white; }
+    section.routine .day-container .mandatory-active {
+      border-left: 4px solid white;
+      border-top: 4px solid white; }
+    section.routine .day-container .optional-active {
+      border-left: 4px solid white;
+      border-top: 4px solid white; }
 
 @media (max-width: 680px) {
   section.routine .calendar-container {
@@ -322,7 +344,9 @@ section.routine {
       max-height: 12vw; }
     section.routine .calendar-container .off-day {
       max-width: 6vw;
-      max-height: 6vw; } }
+      max-height: 6vw; }
+  section.routine .day-container {
+    width: 95%; } }
 @media (max-width: 400px) {
   section.routine .calendar-container .work-day p {
     font-size: 16px; } }
@@ -361,7 +385,7 @@ section.awards {
     section.awards .trophy-container object {
       position: absolute;
       max-width: 100%;
-      transition: all 600ms ease-in-out 1000ms;
+      transition: all 600ms ease-in-out 800ms;
       opacity: 1; }
     section.awards .trophy-container .hidden {
       opacity: 0;
@@ -441,7 +465,13 @@ section.diversity {
     flex-direction: column;
     justify-content: center; }
     section.diversity .diversity-blurb h3 {
-      color: white; }
+      color: white;
+      max-width: 620px;
+      margin-bottom: 25px; }
+    section.diversity .diversity-blurb p {
+      color: white;
+      max-width: 620px;
+      margin: 0 auto; }
 
 @media (max-width: 800px) {
   section.diversity {

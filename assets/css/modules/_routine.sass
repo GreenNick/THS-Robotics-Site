@@ -46,6 +46,28 @@ section.routine
       flex-grow: 1
       background: white
       margin: auto 0
+  .day-container
+    width: 620px
+    margin: 25px auto 0
+    display: flex
+    justify-content: center
+    div
+      border-left: 4px solid $color-green
+      border-top: 4px solid $color-green
+      transition: border 200ms ease-in-out
+    h4
+      padding: 12px
+      color: white
+      font-family: $heading-font
+      font-size: 20px
+    p
+      color: white
+    .mandatory-active
+      border-left: 4px solid white
+      border-top: 4px solid white
+    .optional-active
+      border-left: 4px solid white
+      border-top: 4px solid white
 
 @media (max-width: 680px)
   section.routine
@@ -57,6 +79,8 @@ section.routine
       .off-day
         max-width: 6vw
         max-height: 6vw
+    .day-container
+      width: 95%
 
 @media (max-width: 400px)
   section.routine
