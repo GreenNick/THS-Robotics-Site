@@ -1,4 +1,4 @@
-#nav-btn
+.nav-btn
   height: 50px
   width: 50px
   z-index: 2
@@ -18,10 +18,28 @@
     opacity: 0.9
     position: relative
     margin: auto
+    transition: transform 250ms ease-in-out
   span:before
     top: 16px
   span:after
     top: -24px
+.nav-close
+  span
+    background: transparent
+  span:before
+    transform-origin: 50% 50%
+    position: absolute
+    opacity: 1
+    top: 0
+    width: 50px
+    transform: rotate3d(0, 0, 1, 45deg)
+  span:after
+    transform-origin: 50% 50%
+    position: absolute
+    opacity: 1
+    top: 0
+    width: 50px
+    transform: rotate3d(0, 0, 1, -45deg)
 nav
   z-index: 2
   background: $primary-grey

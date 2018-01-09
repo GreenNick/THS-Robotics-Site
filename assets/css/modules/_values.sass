@@ -7,9 +7,13 @@ section.values
     padding: 8px
     color: white
     margin: 20px auto auto auto
-    display: block
+    overflow: hidden
+    max-height: 400px
+    transition: all 500ms ease-in-out
   .hidden
-    display: none
+    max-height: 0
+    padding: 0
+    margin: 0 auto
   &:before
     width: 105vw
     overflow: hidden
@@ -57,6 +61,7 @@ section.values
       margin-top: 12px
       color: white
       font-size: 18px
+      transition: none
   h3
     color: white
 

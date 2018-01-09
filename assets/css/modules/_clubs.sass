@@ -3,12 +3,22 @@ section.clubs
   h3
     margin: 0 auto 50px auto
   hr
-    max-width: 310px
+    max-width: 150px
     margin: auto auto 50px auto
-  .club-container
-    background: linear-gradient(to bottom right, rgba(187, 107, 217, 0.9), rgba(86, 204, 242, 0.9)), url('../img/TSA-bg.jpeg') center
+    background: $primary-grey
+    height: 3px
+    border: none
+  #stem-bg
+    background: linear-gradient(to right, rgba(111, 207, 151, 0.9), rgba(187, 107, 217, 0.9)), url('../img/stem-bg.svg') center
     background-attachment: fixed
-    background-color: white
+    background-size: cover
+  #vex-bg
+    background: linear-gradient(to right, rgba(86, 204, 242, 0.9), rgba(111, 207, 151, 0.9)), url('../img/vex-bg.svg') center
+    background-attachment: fixed
+    background-size: cover
+  .club-container
+    background: linear-gradient(to right, rgba(187, 107, 217, 0.9), rgba(86, 204, 242, 0.9)), url('../img/tsa-bg.svg') center
+    background-attachment: fixed
     background-size: cover
     display: flex
     flex-direction: column
@@ -20,10 +30,13 @@ section.clubs
         position: relative
         background: $secondary-grey
         margin: 0 50px
+        &:active
+          transform: scale(.9)
     h4
-      max-width: 620px
+      width: 620px
       margin: 50px auto 8px
       padding: 0 12px
+      text-align: left
       font:
         family: $heading-font
         size: 36px
@@ -35,3 +48,5 @@ section.clubs
       margin: 0 auto
       color: white
       text-shadow: 1px 1px 3px rgba(0,0,0,0.25)
+    .hidden
+      display: none

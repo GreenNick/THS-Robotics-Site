@@ -33,7 +33,10 @@ body {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      cursor: pointer; }
+      cursor: pointer;
+      transition: transform 100ms ease-in-out; }
+      body main .button:active {
+        transform: scale(0.9); }
       body main .button img {
         margin: auto;
         height: 50%;
@@ -52,7 +55,7 @@ footer {
   height: 150px;
   background: #333333; }
 
-#nav-btn {
+.nav-btn {
   height: 50px;
   width: 50px;
   z-index: 2;
@@ -62,7 +65,7 @@ footer {
   display: flex;
   justify-content: center;
   cursor: pointer; }
-  #nav-btn span, #nav-btn span:before, #nav-btn span:after {
+  .nav-btn span, .nav-btn span:before, .nav-btn span:after {
     content: "";
     display: block;
     height: 8px;
@@ -71,11 +74,29 @@ footer {
     background: #828282;
     opacity: 0.9;
     position: relative;
-    margin: auto; }
-  #nav-btn span:before {
+    margin: auto;
+    transition: transform 250ms ease-in-out; }
+  .nav-btn span:before {
     top: 16px; }
-  #nav-btn span:after {
+  .nav-btn span:after {
     top: -24px; }
+
+.nav-close span {
+  background: transparent; }
+.nav-close span:before {
+  transform-origin: 50% 50%;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  width: 50px;
+  transform: rotate3d(0, 0, 1, 45deg); }
+.nav-close span:after {
+  transform-origin: 50% 50%;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  width: 50px;
+  transform: rotate3d(0, 0, 1, -45deg); }
 
 nav {
   z-index: 2;
@@ -179,9 +200,13 @@ section.values {
     padding: 8px;
     color: white;
     margin: 20px auto auto auto;
-    display: block; }
+    overflow: hidden;
+    max-height: 400px;
+    transition: all 500ms ease-in-out; }
   section.values .hidden {
-    display: none; }
+    max-height: 0;
+    padding: 0;
+    margin: 0 auto; }
   section.values:before {
     width: 105vw;
     overflow: hidden;
@@ -228,7 +253,8 @@ section.values {
       padding: 0;
       margin-top: 12px;
       color: white;
-      font-size: 18px; }
+      font-size: 18px;
+      transition: none; }
   section.values h3 {
     color: white; }
 
@@ -432,12 +458,22 @@ section.clubs {
   section.clubs h3 {
     margin: 0 auto 50px auto; }
   section.clubs hr {
-    max-width: 310px;
-    margin: auto auto 50px auto; }
-  section.clubs .club-container {
-    background: linear-gradient(to bottom right, rgba(187, 107, 217, 0.9), rgba(86, 204, 242, 0.9)), url("../img/TSA-bg.jpeg") center;
+    max-width: 150px;
+    margin: auto auto 50px auto;
+    background: #333333;
+    height: 3px;
+    border: none; }
+  section.clubs #stem-bg {
+    background: linear-gradient(to right, rgba(111, 207, 151, 0.9), rgba(187, 107, 217, 0.9)), url("../img/stem-bg.svg") center;
     background-attachment: fixed;
-    background-color: white;
+    background-size: cover; }
+  section.clubs #vex-bg {
+    background: linear-gradient(to right, rgba(86, 204, 242, 0.9), rgba(111, 207, 151, 0.9)), url("../img/vex-bg.svg") center;
+    background-attachment: fixed;
+    background-size: cover; }
+  section.clubs .club-container {
+    background: linear-gradient(to right, rgba(187, 107, 217, 0.9), rgba(86, 204, 242, 0.9)), url("../img/tsa-bg.svg") center;
+    background-attachment: fixed;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -449,10 +485,13 @@ section.clubs {
         position: relative;
         background: #4F4F4F;
         margin: 0 50px; }
+        section.clubs .club-container .button-container .button:active {
+          transform: scale(0.9); }
     section.clubs .club-container h4 {
-      max-width: 620px;
+      width: 620px;
       margin: 50px auto 8px;
       padding: 0 12px;
+      text-align: left;
       font-family: "Ubuntu";
       font-size: 36px;
       font-weight: normal;
@@ -463,6 +502,8 @@ section.clubs {
       margin: 0 auto;
       color: white;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25); }
+    section.clubs .club-container .hidden {
+      display: none; }
 
 section.outreach {
   background: #6FCF97;
@@ -529,6 +570,7 @@ section.contact {
       border-radius: 4px;
       color: white;
       text-align: center;
-      padding-left: 0; }
+      padding-left: 0;
+      cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

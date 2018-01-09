@@ -16,11 +16,12 @@ const scrollTo = () => {
 }
 
 const navPress = () => {
-  const navButton = document.querySelector('#nav-btn'),
+  const navButton = document.querySelector('.nav-btn'),
         navSidebar = document.querySelector('nav');
 
   navButton.addEventListener('click', () => {
     navSidebar.classList.toggle('nav-active');
+    navButton.classList.toggle('nav-close');
   });
 }
 
@@ -35,18 +36,21 @@ const valueState = () => {
             inactiveIcons = document.querySelectorAll(`.value-set:not(#${currentValue}) > .value-icon`),
             inactiveHeadings = document.querySelectorAll(`.value-set:not(#${currentValue}) > p`),
             activeParagraph = document.querySelector(`.values > #${currentValue}`),
-            activeHeading = document.querySelector(`#${currentValue} > p`);
+            activeHeading = document.querySelector(`#${currentValue} > p`),
+            target = event.currentTarget;
       let   nodeIndex;
 
       for (nodeIndex = 0; nodeIndex < 2; nodeIndex++) {
         inactiveParagraphs[nodeIndex].classList.add('hidden');
+        inactiveParagraphs[nodeIndex].style.display = 'none';
         inactiveIcons[nodeIndex].classList.remove('value-active');
         inactiveHeadings[nodeIndex].classList.remove('value-text-active');
       }
 
-      event.currentTarget.classList.toggle('value-active');
-      activeParagraph.classList.toggle('hidden');
+      activeParagraph.style.display = 'inline-block';
+      target.classList.toggle('value-active');
       activeHeading.classList.toggle('value-text-active');
+      activeParagraph.classList.toggle('hidden');
     });
   }
 }
@@ -72,8 +76,8 @@ const calendarHover = dayType => {
 
 const awardsCarousel = () => {
   const awardObjects = document.querySelectorAll('.trophy-container object'),
-        arrowLeft = document.querySelector('.left'),
-        arrowRight = document.querySelector('.right');
+        arrowLeft = document.querySelector('.trophy-container .left'),
+        arrowRight = document.querySelector('.trophy-container .right');
   let   carouselIndex = 0,
         nodeIndex;
 
@@ -98,9 +102,63 @@ const awardsCarousel = () => {
   });
 }
 
+const clubsCarousel = () => {
+  const clubDesc = document.querySelectorAll('.club-container p'),
+        clubHead = document.querySelectorAll('.club-container h4'),
+        arrowLeft = document.querySelector('.club-container .left'),
+        arrowRight = document.querySelector('.club-container .right');
+  let   carouselIndex = 0,
+        nodeIndex;
+
+  arrowLeft.addEventListener('click', event => {
+    clubDesc[carouselIndex].classList.add('hidden');
+    clubHead[carouselIndex].classList.add('hidden');
+
+    if (carouselIndex === 0) {
+      carouselIndex = 2;
+    } else {
+      carouselIndex--;
+    }
+
+    if (carouselIndex === 0) {
+      document.querySelector('.club-container').id = '';
+    } else if (carouselIndex === 1) {
+      document.querySelector('.club-container').id = 'vex-bg';
+    } else if (carouselIndex === 2) {
+      document.querySelector('.club-container').id = 'stem-bg';
+    }
+
+    clubDesc[carouselIndex].classList.remove('hidden');
+    clubHead[carouselIndex].classList.remove('hidden');
+  });
+
+  arrowRight.addEventListener('click', event => {
+    clubDesc[carouselIndex].classList.add('hidden');
+    clubHead[carouselIndex].classList.add('hidden');
+
+    if (carouselIndex === 2) {
+      carouselIndex = 0;
+    } else {
+      carouselIndex++;
+    }
+
+    if (carouselIndex === 0) {
+      document.querySelector('.club-container').id = '';
+    } else if (carouselIndex === 1) {
+      document.querySelector('.club-container').id = 'vex-bg';
+    } else if (carouselIndex === 2) {
+      document.querySelector('.club-container').id = 'stem-bg';
+    }
+
+    clubDesc[carouselIndex].classList.remove('hidden');
+    clubHead[carouselIndex].classList.remove('hidden');
+  });
+}
+
 navPress();
 calendarHover('optional');
 calendarHover('mandatory');
 scrollTo();
 valueState();
 awardsCarousel();
+clubsCarousel();
