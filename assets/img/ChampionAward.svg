@@ -60,9 +60,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284274"
-     inkscape:cx="209.87927"
-     inkscape:cy="198.30535"
+     inkscape:zoom="1.0000001"
+     inkscape:cx="-112.35553"
+     inkscape:cy="219.78136"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -648,8 +648,7 @@
         </g>
       </g>
       <g
-         aria-label="Tournament
-Champion"
+         aria-label="Tournament Champion"
          transform="scale(1.27777,0.78261346)"
          style="font-style:normal;font-weight:normal;font-size:13.52306557px;line-height:0.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.33807662"
          id="text2547">
@@ -730,11 +729,11 @@ Champion"
     <g
        aria-label="1"
        transform="matrix(0.26458333,0,0,0.26458333,39.640936,37.110263)"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:4.02519703;stroke-miterlimit:4;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:4.02519703;stroke-miterlimit:4;stroke-dasharray:none"
        id="flowRoot930">
       <path
          d="m 196.928,267.7212 q 5.472,-2.112 10.656,-5.376 5.184,-3.36 9.504,-8.352 h 6.336 v 66.528 h -8.928 v -54.144 q -1.152,1.056 -2.88,2.208 -1.632,1.152 -3.648,2.208 -1.92,1.056 -4.128,2.016 -2.112,0.96 -4.128,1.632 z"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#bb6bd9;fill-opacity:1;stroke:none;stroke-width:4.02519703;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;fill:#333333;fill-opacity:1;stroke:none;stroke-width:4.02519703;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
          id="path988" />
     </g>
   </g>
