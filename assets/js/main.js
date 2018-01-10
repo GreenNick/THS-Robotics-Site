@@ -90,7 +90,7 @@ const awardsCarousel = () => {
   arrowLeft.addEventListener('click', event => {
     awardObjects[carouselIndex].classList.add('hidden');
     if (carouselIndex === 0) {
-      carouselIndex = 2;
+      carouselIndex = 3;
     } else {
       carouselIndex--;
     }
@@ -99,7 +99,7 @@ const awardsCarousel = () => {
 
   arrowRight.addEventListener('click', event => {
     awardObjects[carouselIndex].classList.add('hidden');
-    if (carouselIndex === 2) {
+    if (carouselIndex === 3) {
       carouselIndex = 0;
     } else {
       carouselIndex++;
@@ -127,9 +127,9 @@ const clubsCarousel = () => {
     }
 
     if (carouselIndex === 0) {
-      document.querySelector('.club-container').id = '';
-    } else if (carouselIndex === 1) {
       document.querySelector('.club-container').id = 'vex-bg';
+    } else if (carouselIndex === 1) {
+      document.querySelector('.club-container').id = 'tsa-bg';
     } else if (carouselIndex === 2) {
       document.querySelector('.club-container').id = 'stem-bg';
     }
@@ -149,9 +149,9 @@ const clubsCarousel = () => {
     }
 
     if (carouselIndex === 0) {
-      document.querySelector('.club-container').id = '';
-    } else if (carouselIndex === 1) {
       document.querySelector('.club-container').id = 'vex-bg';
+    } else if (carouselIndex === 1) {
+      document.querySelector('.club-container').id = 'tsa-bg';
     } else if (carouselIndex === 2) {
       document.querySelector('.club-container').id = 'stem-bg';
     }

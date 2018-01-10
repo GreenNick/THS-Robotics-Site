@@ -320,6 +320,7 @@ section.routine {
     justify-content: center; }
     section.routine .day-container div {
       border-left: 4px solid #6FCF97;
+      border-top: 4px solid #6FCF97;
       transition: border 200ms ease-in-out; }
     section.routine .day-container h4 {
       padding: 12px;
@@ -398,14 +399,13 @@ section.awards {
       right: -10px;
       top: 60%; }
   section.awards .qual-bar {
-    height: 150px;
     width: 100%;
     background: #333333;
     display: flex;
     flex-direction: column;
     justify-content: center; }
     section.awards .qual-bar .container {
-      margin: auto;
+      margin: 25px auto;
       width: 620px;
       display: flex;
       justify-content: space-between; }
@@ -428,7 +428,7 @@ section.awards {
       justify-content: center;
       flex-direction: column; }
       section.awards .qual-bar .container .qualifications {
-        margin: 20px auto; } }
+        margin: 10px auto; } }
 section.teacher {
   padding-top: 50px; }
   section.teacher h3 {
@@ -497,13 +497,14 @@ section.clubs {
     background-attachment: fixed;
     background-size: cover; }
   section.clubs #vex-bg {
-    background: linear-gradient(to right, rgba(86, 204, 242, 0.9), rgba(111, 207, 151, 0.9)), url("../img/vex-bg.svg") center;
+    background: linear-gradient(to right, rgba(187, 107, 217, 0.9), rgba(86, 204, 242, 0.9)), url("../img/vex-bg.svg") center;
+    background-attachment: fixed;
+    background-size: cover; }
+  section.clubs #tsa-bg {
+    background: linear-gradient(to right, rgba(86, 204, 242, 0.9), rgba(111, 207, 151, 0.9)), url("../img/tsa-bg.svg") center;
     background-attachment: fixed;
     background-size: cover; }
   section.clubs .club-container {
-    background: linear-gradient(to right, rgba(187, 107, 217, 0.9), rgba(86, 204, 242, 0.9)), url("../img/tsa-bg.svg") center;
-    background-attachment: fixed;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center; }
