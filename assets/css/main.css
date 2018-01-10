@@ -317,24 +317,24 @@ section.routine {
     width: 620px;
     margin: 25px auto 0;
     display: flex;
-    justify-content: center; }
+    flex-direction: column;
+    justify-content: center;
+    border-left: solid #6FCF97 4px; }
     section.routine .day-container div {
-      border-left: 4px solid #6FCF97;
-      border-top: 4px solid #6FCF97;
-      transition: border 200ms ease-in-out; }
+      border-left: solid #6FCF97 4px;
+      transition: border 200ms ease-in-out;
+      margin-top: 25px; }
     section.routine .day-container h4 {
-      padding: 12px;
+      padding: 0 12px;
       color: white;
       font-family: "Ubuntu";
       font-size: 20px; }
     section.routine .day-container p {
       color: white; }
     section.routine .day-container .mandatory-active {
-      border-left: 4px solid white;
-      border-top: 4px solid white; }
+      border-left: solid white 4px; }
     section.routine .day-container .optional-active {
-      border-left: 4px solid white;
-      border-top: 4px solid white; }
+      border-left: solid white 4px; }
 
 @media (max-width: 680px) {
   section.routine .calendar-container {
@@ -405,7 +405,7 @@ section.awards {
     flex-direction: column;
     justify-content: center; }
     section.awards .qual-bar .container {
-      margin: 25px auto;
+      margin: 30px auto;
       width: 620px;
       display: flex;
       justify-content: space-between; }
@@ -429,6 +429,9 @@ section.awards {
       flex-direction: column; }
       section.awards .qual-bar .container .qualifications {
         margin: 10px auto; } }
+@media (max-width: 370px) {
+  section.awards .trophy-container {
+    height: 350px; } }
 section.teacher {
   padding-top: 50px; }
   section.teacher h3 {
@@ -449,7 +452,6 @@ section.teacher {
 section.diversity {
   display: flex; }
   section.diversity .diversity-images {
-    background: pink;
     width: 50vw;
     display: flex;
     flex-wrap: wrap; }
@@ -458,15 +460,16 @@ section.diversity {
       width: 20%; }
   section.diversity .diversity-blurb {
     background: #333333;
-    min-height: 40vw;
+    min-height: 30vw;
     width: 50vw;
     display: flex;
     flex-direction: column;
     justify-content: center; }
     section.diversity .diversity-blurb h3 {
       color: white;
-      max-width: 620px;
-      margin-bottom: 25px; }
+      width: 620px;
+      margin-bottom: 25px;
+      text-align: left; }
     section.diversity .diversity-blurb p {
       color: white;
       max-width: 620px;
@@ -482,6 +485,12 @@ section.diversity {
         width: 20%; }
     section.diversity .diversity-blurb {
       width: 100vw; } }
+@media (max-width: 800px) {
+  section.diversity .diversity-blurb h3 {
+    width: 95%; }
+  section.diversity .diversity-blurb p {
+    margin: 0 0 50px;
+    width: 95%; } }
 section.clubs {
   padding-top: 50px; }
   section.clubs h3 {
@@ -606,6 +615,7 @@ section.contact {
       color: white;
       text-align: center;
       padding-left: 0;
-      cursor: pointer; }
+      cursor: pointer;
+      appearance: none; }
 
 /*# sourceMappingURL=main.css.map */
