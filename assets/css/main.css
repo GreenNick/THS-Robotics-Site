@@ -51,9 +51,19 @@ body {
     font-size: 2rem; }
   body main p {
     font-size: 1rem; } }
-footer {
+body footer {
   height: 150px;
-  background: #333333; }
+  background: #333333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  body footer p {
+    max-width: 620px;
+    margin: auto;
+    text-align: center;
+    color: white; }
+    body footer p a {
+      color: #6FCF97; }
 
 .nav-btn {
   height: 50px;
@@ -468,12 +478,12 @@ section.diversity {
     section.diversity .diversity-blurb h3 {
       color: white;
       width: 620px;
-      margin-bottom: 25px;
+      margin-bottom: 8px;
       text-align: left; }
     section.diversity .diversity-blurb p {
       color: white;
       max-width: 620px;
-      margin: 0 auto 50px; }
+      margin: 0 auto 8px; }
 
 @media (max-width: 800px) {
   section.diversity {
@@ -551,7 +561,8 @@ section.clubs {
     width: 95%; } }
 section.outreach {
   background: #6FCF97;
-  display: flex; }
+  display: flex;
+  min-height: 600px; }
   section.outreach .outreach-text {
     width: 70vw;
     margin: 50px 0; }
@@ -564,6 +575,11 @@ section.outreach {
       color: white;
       max-width: 620px;
       margin: 0 auto 8px; }
+  section.outreach .outreach-image {
+    min-height: 100%;
+    width: 30vw;
+    background: url("../img/Recruitment.jpg") center;
+    background-size: cover; }
 
 @media (max-width: 800px) {
   section.outreach {
