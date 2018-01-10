@@ -320,7 +320,6 @@ section.routine {
     justify-content: center; }
     section.routine .day-container div {
       border-left: 4px solid #6FCF97;
-      border-top: 4px solid #6FCF97;
       transition: border 200ms ease-in-out; }
     section.routine .day-container h4 {
       padding: 12px;
@@ -459,7 +458,7 @@ section.diversity {
       width: 20%; }
   section.diversity .diversity-blurb {
     background: #333333;
-    height: 40vw;
+    min-height: 40vw;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -471,7 +470,7 @@ section.diversity {
     section.diversity .diversity-blurb p {
       color: white;
       max-width: 620px;
-      margin: 0 auto; }
+      margin: 0 auto 50px; }
 
 @media (max-width: 800px) {
   section.diversity {
@@ -535,6 +534,11 @@ section.clubs {
     section.clubs .club-container .hidden {
       display: none; }
 
+@media (max-width: 680px) {
+  section.clubs .club-container h4 {
+    width: 95%; }
+  section.clubs .club-container p {
+    width: 95%; } }
 section.outreach {
   background: #6FCF97;
   display: flex; }
