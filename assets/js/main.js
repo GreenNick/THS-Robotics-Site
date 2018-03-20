@@ -1,170 +1,168 @@
 const scrollTo = () => {
-  const navItems = document.querySelectorAll('nav a'),
-        navButton = document.querySelector('.nav-btn'),
-        navSidebar = document.querySelector('nav');
-  let   nodeIndex;
+  const navItems = document.querySelectorAll('nav a')
+  const navButton = document.querySelector('.nav-btn')
+  const navSidebar = document.querySelector('nav')
 
-  for (nodeIndex = 0; nodeIndex < navItems.length; nodeIndex++) {
-    navItems[nodeIndex].addEventListener('click', event => {
-      const section = event.currentTarget.getAttribute('href'),
-            target = document.querySelector(section);
+  navItems.forEach((navItem) => {
+    navItem.addEventListener('click', event => {
+      const section = event.currentTarget.getAttribute('href')
+      const target = document.querySelector(section)
 
-      event.preventDefault();
-      target.scrollIntoView({behavior: 'smooth'});
-      navSidebar.classList.toggle('nav-active');
-      navButton.classList.toggle('nav-close');
-    });
-  }
+      event.preventDefault()
+      target.scrollIntoView({behavior: 'smooth'})
+      navSidebar.classList.toggle('nav-active')
+      navButton.classList.toggle('nav-close')
+    })
+  })
 }
 
 const navPress = () => {
-  const navButton = document.querySelector('.nav-btn'),
-        navSidebar = document.querySelector('nav');
+  const navButton = document.querySelector('.nav-btn')
+  const navSidebar = document.querySelector('nav')
 
   navButton.addEventListener('click', () => {
-    navSidebar.classList.toggle('nav-active');
-    navButton.classList.toggle('nav-close');
-  });
+    navSidebar.classList.toggle('nav-active')
+    navButton.classList.toggle('nav-close')
+  })
 }
 
 const valueState = () => {
-  const valueIcons = document.querySelectorAll('.value-icon');
-  let   nodeIndex;
+  const valueIcons = document.querySelectorAll('.value-icon')
 
-  for (nodeIndex = 0; nodeIndex < valueIcons.length; nodeIndex++) {
-    valueIcons[nodeIndex].addEventListener('click', event => {
-      const currentValue = event.currentTarget.parentNode.getAttribute('id'),
-            inactiveParagraphs = document.querySelectorAll(`.values > p:not(#${currentValue})`),
-            inactiveIcons = document.querySelectorAll(`.value-set:not(#${currentValue}) > .value-icon`),
-            inactiveHeadings = document.querySelectorAll(`.value-set:not(#${currentValue}) > p`),
-            activeParagraph = document.querySelector(`.values > #${currentValue}`),
-            activeHeading = document.querySelector(`#${currentValue} > p`),
-            target = event.currentTarget;
-      let   nodeIndex;
+  valueIcons.forEach((valueIcon) => {
+    valueIcon.addEventListener('click', event => {
+      const currentValue = event.currentTarget.parentNode.getAttribute('id')
+      const inactiveParagraphs = document.querySelectorAll(`.values > p:not(#${currentValue})`)
+      const inactiveIcons = document.querySelectorAll(`.value-set:not(#${currentValue}) > .value-icon`)
+      const inactiveHeadings = document.querySelectorAll(`.value-set:not(#${currentValue}) > p`)
+      const activeParagraph = document.querySelector(`.values > #${currentValue}`)
+      const activeHeading = document.querySelector(`#${currentValue} > p`)
+      const target = event.currentTarget
 
-      for (nodeIndex = 0; nodeIndex < 2; nodeIndex++) {
-        inactiveParagraphs[nodeIndex].classList.add('hidden');
-        inactiveParagraphs[nodeIndex].style.display = 'none';
-        inactiveIcons[nodeIndex].classList.remove('value-active');
-        inactiveHeadings[nodeIndex].classList.remove('value-text-active');
+      for (let i = 0; i < 2; i++) {
+        inactiveParagraphs[i].classList.add('hidden')
+        inactiveParagraphs[i].style.display = 'none'
+        inactiveIcons[i].classList.remove('value-active')
+        inactiveHeadings[i].classList.remove('value-text-active')
       }
 
-      activeParagraph.style.display = 'inline-block';
-      target.classList.toggle('value-active');
-      activeHeading.classList.toggle('value-text-active');
-      activeParagraph.classList.toggle('hidden');
-    });
-  }
+      activeParagraph.style.display = 'inline-block'
+      target.classList.toggle('value-active')
+      activeHeading.classList.toggle('value-text-active')
+      activeParagraph.classList.toggle('hidden')
+    })
+  })
 }
 
 const calendarHover = dayType => {
-  const dayList = document.querySelectorAll(`.${dayType}`);
-  let   nodeIndex;
+  const dayList = document.querySelectorAll(`.${dayType}`)
+  const dayContainer = document.querySelector(`.${dayType}-container`)
 
-  for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
-    dayList[nodeIndex].addEventListener('mouseenter', () => {
-      for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
-        dayList[nodeIndex].classList.add(`${dayType}-active`);
-      }
+  dayList.forEach((day) => {
+    day.addEventListener('mouseenter', () => {
+      dayList.forEach((day) => {
+        day.classList.add(`${dayType}-active`)
+      })
 
-      document.querySelector(`.${dayType}-container`).classList.add(`${dayType}-active`);
-    });
+      dayContainer.classList.add(`${dayType}-active`)
+    })
 
-    dayList[nodeIndex].addEventListener('mouseleave', () => {
-      for (nodeIndex = 0; nodeIndex < dayList.length; nodeIndex++) {
-        dayList[nodeIndex].classList.remove(`${dayType}-active`);
-      }
+    day.addEventListener('mouseleave', () => {
+      dayList.forEach((day) => {
+        day.classList.remove(`${dayType}-active`)
+      })
 
-      document.querySelector(`.${dayType}-container`).classList.remove(`${dayType}-active`);
-    });
-  }
+      dayContainer.classList.remove(`${dayType}-active`)
+    })
+  })
 }
 
 const awardsCarousel = () => {
-  const awardObjects = document.querySelectorAll('.trophy-container object'),
-        arrowLeft = document.querySelector('.trophy-container .left'),
-        arrowRight = document.querySelector('.trophy-container .right');
-  let   carouselIndex = 0,
-        nodeIndex;
+  const awardObjects = document.querySelectorAll('.trophy-container object')
+  const arrowLeft = document.querySelector('.trophy-container .left')
+  const arrowRight = document.querySelector('.trophy-container .right')
+  let carouselIndex = 0
 
   arrowLeft.addEventListener('click', event => {
-    awardObjects[carouselIndex].classList.add('hidden');
-    if (carouselIndex === 0) {
-      carouselIndex = 3;
-    } else {
-      carouselIndex--;
-    }
-    awardObjects[carouselIndex].classList.remove('hidden');
-  });
+    awardObjects[carouselIndex].classList.add('hidden')
+    carouselIndex === 0
+      ? carouselIndex = 3
+      : carouselIndex--
+    awardObjects[carouselIndex].classList.remove('hidden')
+  })
 
   arrowRight.addEventListener('click', event => {
-    awardObjects[carouselIndex].classList.add('hidden');
-    if (carouselIndex === 3) {
-      carouselIndex = 0;
-    } else {
-      carouselIndex++;
-    }
-    awardObjects[carouselIndex].classList.remove('hidden');
-  });
+    awardObjects[carouselIndex].classList.add('hidden')
+    carouselIndex === 3
+      ? carouselIndex = 0
+      : carouselIndex++
+    awardObjects[carouselIndex].classList.remove('hidden')
+  })
 }
 
 const clubsCarousel = () => {
-  const clubDesc = document.querySelectorAll('.club-container p'),
-        clubHead = document.querySelectorAll('.club-container h4'),
-        arrowLeft = document.querySelector('.club-container .left'),
-        arrowRight = document.querySelector('.club-container .right');
-  let   carouselIndex = 0,
-        nodeIndex;
+  const clubContainer = document.querySelector('.club-container')
+  const clubDesc = document.querySelectorAll('.club-container p')
+  const clubHead = document.querySelectorAll('.club-container h4')
+  const arrowLeft = document.querySelector('.club-container .left')
+  const arrowRight = document.querySelector('.club-container .right')
+  let carouselIndex = 0
 
   arrowLeft.addEventListener('click', event => {
-    clubDesc[carouselIndex].classList.add('hidden');
-    clubHead[carouselIndex].classList.add('hidden');
+    clubDesc[carouselIndex].classList.add('hidden')
+    clubHead[carouselIndex].classList.add('hidden')
 
-    if (carouselIndex === 0) {
-      carouselIndex = 2;
-    } else {
-      carouselIndex--;
+    carouselIndex === 0
+      ? carouselIndex = 2
+      : carouselIndex--
+
+    switch (carouselIndex) {
+      case 0:
+        clubContainer.id = 'vex-bg'
+        break
+      case 1:
+        clubContainer.id = 'tsa-bg'
+        break
+      case 2:
+        clubContainer.id = 'stem-bg'
+        break
     }
 
-    if (carouselIndex === 0) {
-      document.querySelector('.club-container').id = 'vex-bg';
-    } else if (carouselIndex === 1) {
-      document.querySelector('.club-container').id = 'tsa-bg';
-    } else if (carouselIndex === 2) {
-      document.querySelector('.club-container').id = 'stem-bg';
-    }
-
-    clubDesc[carouselIndex].classList.remove('hidden');
-    clubHead[carouselIndex].classList.remove('hidden');
-  });
+    clubDesc[carouselIndex].classList.remove('hidden')
+    clubHead[carouselIndex].classList.remove('hidden')
+  })
 
   arrowRight.addEventListener('click', event => {
-    clubDesc[carouselIndex].classList.add('hidden');
-    clubHead[carouselIndex].classList.add('hidden');
+    clubDesc[carouselIndex].classList.add('hidden')
+    clubHead[carouselIndex].classList.add('hidden')
 
-    if (carouselIndex === 2) {
-      carouselIndex = 0;
-    } else {
-      carouselIndex++;
+    carouselIndex === 2
+      ? carouselIndex = 0
+      : carouselIndex++
+
+    switch (carouselIndex) {
+      case 0:
+        clubContainer.id = 'vex-bg'
+        break
+      case 1:
+        clubContainer.id = 'tsa-bg'
+        break
+      case 2:
+        clubContainer.id = 'stem-bg'
+        break
     }
 
-    if (carouselIndex === 0) {
-      document.querySelector('.club-container').id = 'vex-bg';
-    } else if (carouselIndex === 1) {
-      document.querySelector('.club-container').id = 'tsa-bg';
-    } else if (carouselIndex === 2) {
-      document.querySelector('.club-container').id = 'stem-bg';
-    }
-
-    clubDesc[carouselIndex].classList.remove('hidden');
-    clubHead[carouselIndex].classList.remove('hidden');
-  });
+    clubDesc[carouselIndex].classList.remove('hidden')
+    clubHead[carouselIndex].classList.remove('hidden')
+  })
 }
 
-navPress();
-calendarHover('optional');
-calendarHover('mandatory');
-scrollTo();
-valueState();
-awardsCarousel();
-clubsCarousel();
+(() => {
+  navPress()
+  calendarHover('optional')
+  calendarHover('mandatory')
+  scrollTo()
+  valueState()
+  awardsCarousel()
+  clubsCarousel()
+})()
